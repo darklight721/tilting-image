@@ -1,0 +1,35 @@
+{
+  "name": "tilt-image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/tilt-image.js",
+  "scripts": {
+    "build": "babel index.js --out-file dist/tilt-image.js --optional es7.objectRestSpread --modules umd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darklight721/tilt-image"
+  },
+  "keywords": [
+    "tilt",
+    "image",
+    "react",
+    "component"
+  ],
+  "author": {
+    "name": "Roy Evan Sia",
+    "email": "roy.evan.sia@gmail.com",
+    "url": "https://github.com/darklight721"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darklight721/tilt-image/issues"
+  },
+  "homepage": "https://github.com/darklight721/tilt-image",
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel": "^5.5.4"
+  }
+}
