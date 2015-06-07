@@ -2,9 +2,9 @@
   "name": "tilting-image",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/tilting-image.js",
+  "main": "dist/TiltingImage.js",
   "scripts": {
-    "build": "babel index.js --out-file dist/tilting-image.js --optional es7.objectRestSpread --modules umd"
+    "build": "babel TiltingImage.js --out-dir dist --optional es7.objectRestSpread --modules umd"
   },
   "repository": {
     "type": "git",
