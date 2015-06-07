@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 
 const MAX_ROTATE = 5;
 
-export default class TiltImage extends Component {
+export default class TiltingImage extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      rotateX: 0,
-      rotateY: 0
-    };
+    this.state = { rotateX: 0, rotateY: 0 };
   }
 
   render() {
@@ -32,7 +28,7 @@ export default class TiltImage extends Component {
     };
 
     return (
-      <div {...attrs} style={containerStyle} onMouseOver={this.tilt.bind(this)}>
+      <div {...attrs} style={containerStyle} onMouseMove={this.tilt.bind(this)} onMouseLeave={this.reset.bind(this)}>
         <div style={imageStyle}></div>
       </div>
     );
@@ -40,14 +36,18 @@ export default class TiltImage extends Component {
 
   tilt(evt) {
     const targetEl = evt.currentTarget;
-    const rotateX = map(evt.clientX, 0, targetEl.clientWidth, -MAX_ROTATE, MAX_ROTATE);
-    const rotateY = map(evt.clientY, 0, targetEl.clientHeight, -MAX_ROTATE, MAX_ROTATE);
+    const rotateX = map(evt.clientY, 0, targetEl.clientHeight, MAX_ROTATE, -MAX_ROTATE);
+    const rotateY = map(evt.clientX, 0, targetEl.clientWidth, -MAX_ROTATE, MAX_ROTATE);
 
     this.setState({ rotateX, rotateY });
   }
+
+  reset() {
+    this.setState({ rotateX: 0, rotateY: 0 });
+  }
 };
 
-TiltImage.propTypes = {
+TiltingImage.propTypes = {
   src: React.PropTypes.string.isRequired,
   width: React.PropTypes.string.isRequired,
   height: React.PropTypes.string.isRequired

@@ -31,21 +31,17 @@
 
   var MAX_ROTATE = 5;
 
-  var TiltImage = (function (_Component) {
-    function TiltImage(props) {
-      _classCallCheck(this, TiltImage);
+  var TiltingImage = (function (_Component) {
+    function TiltingImage(props) {
+      _classCallCheck(this, TiltingImage);
 
-      _get(Object.getPrototypeOf(TiltImage.prototype), 'constructor', this).call(this, props);
-
-      this.state = {
-        rotateX: 0,
-        rotateY: 0
-      };
+      _get(Object.getPrototypeOf(TiltingImage.prototype), 'constructor', this).call(this, props);
+      this.state = { rotateX: 0, rotateY: 0 };
     }
 
-    _inherits(TiltImage, _Component);
+    _inherits(TiltingImage, _Component);
 
-    _createClass(TiltImage, [{
+    _createClass(TiltingImage, [{
       key: 'render',
       value: function render() {
         var _props = this.props;
@@ -93,13 +89,13 @@
       }
     }]);
 
-    return TiltImage;
+    return TiltingImage;
   })(_react.Component);
 
-  module.exports = TiltImage;
+  module.exports = TiltingImage;
   ;
 
-  TiltImage.propTypes = {
+  TiltingImage.propTypes = {
     src: _React['default'].PropTypes.string.isRequired,
     width: _React['default'].PropTypes.string.isRequired,
     height: _React['default'].PropTypes.string.isRequired

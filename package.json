@@ -1,17 +1,17 @@
 {
-  "name": "tilt-image",
+  "name": "tilting-image",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/tilt-image.js",
+  "main": "dist/tilting-image.js",
   "scripts": {
-    "build": "babel index.js --out-file dist/tilt-image.js --optional es7.objectRestSpread --modules umd"
+    "build": "babel index.js --out-file dist/tilting-image.js --optional es7.objectRestSpread --modules umd"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/darklight721/tilt-image"
+    "url": "https://github.com/darklight721/tilting-image"
   },
   "keywords": [
-    "tilt",
+    "tilting",
     "image",
     "react",
     "component"
@@ -23,9 +23,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/darklight721/tilt-image/issues"
+    "url": "https://github.com/darklight721/tilting-image/issues"
   },
-  "homepage": "https://github.com/darklight721/tilt-image",
+  "homepage": "https://github.com/darklight721/tilting-image",
   "dependencies": {
     "react": "^0.13.3"
   },
