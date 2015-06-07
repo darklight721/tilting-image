@@ -1,10 +1,11 @@
 {
   "name": "tilting-image",
   "version": "1.0.0",
-  "description": "",
+  "description": "A React component that adds a tilt effect on images",
   "main": "dist/TiltingImage.js",
   "scripts": {
-    "build": "babel TiltingImage.js --out-dir dist --optional es7.objectRestSpread --modules umd"
+    "build": "babel TiltingImage.js --out-dir dist --optional es7.objectRestSpread --modules umd",
+    "watch": "npm run build -- --watch"
   },
   "repository": {
     "type": "git",
