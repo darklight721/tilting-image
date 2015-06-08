@@ -2,28 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tilt Image Demo</title>
+  <title>Tilting Image Demo</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
   <style type="text/css">
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+      font-family: 'Roboto', sans-serif;
     }
-    #demo {
-      margin: 50px auto;
-      width: 80%;
-      height: 80%;
+    #background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    #text-box {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 20px;
+      width: 200px;
+      color: #555;
+    }
+    #text-box a {
+      font-size: 1.1em;
+      color: black;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    #text-box a:hover {
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div id="demo"></div>
+  <div id="background"></div>
+  <div id="text-box">
+    <h1>A Tilting Image Demo</h1>
+    <a href="https://github.com/darklight721/tilting-image">Get the code</a>
+  </div>
   <script src="https://fb.me/react-0.13.3.js"></script>
   <script src="../dist/TiltingImage.js"></script>
   <script type="text/javascript">
     React.render(
-      React.createElement(TiltingImage, { src: 'image1.jpeg', width: '100%', height: '100%' }),
-      document.getElementById('demo')
+      React.createElement(TiltingImage, { src: 'image.jpeg', width: '100%', height: '100%' }),
+      document.getElementById('background')
     );
   </script>
 </body>

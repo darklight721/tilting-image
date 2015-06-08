@@ -51,20 +51,25 @@
 
         var attrs = _objectWithoutProperties(_props, ['src', 'width', 'height']);
 
+        var transform = 'scale(1.1) rotateX(' + this.state.rotateX + 'deg) rotateY(' + this.state.rotateY + 'deg)';
+
         var containerStyle = {
           width: width,
           height: height,
           overflow: 'hidden',
+          WebkitPerspective: '1000px',
           perspective: '1000px'
         };
 
         var imageStyle = {
           width: '100%',
           height: '100%',
+          backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundImage: 'url("' + src + '")',
-          transition: 'transform 0.1s',
-          transform: 'scale(1.1) rotateX(' + this.state.rotateX + 'deg) rotateY(' + this.state.rotateY + 'deg)'
+          transition: 'all 0.1s',
+          WebkitTransform: transform,
+          transform: transform
         };
 
         return _React['default'].createElement(

@@ -11,20 +11,25 @@ export default class TiltingImage extends Component {
   render() {
     const { src, width, height, ...attrs } = this.props;
 
+    const transform = `scale(1.1) rotateX(${this.state.rotateX}deg) rotateY(${this.state.rotateY}deg)`;
+
     const containerStyle = {
       width,
       height,
       overflow: 'hidden',
+      WebkitPerspective: '1000px',
       perspective: '1000px'
     };
 
     const imageStyle = {
       width: '100%',
       height: '100%',
+      backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundImage: `url("${src}")`,
-      transition: 'transform 0.1s',
-      transform: `scale(1.1) rotateX(${this.state.rotateX}deg) rotateY(${this.state.rotateY}deg)`
+      transition: 'all 0.1s',
+      WebkitTransform: transform,
+      transform,
     };
 
     return (
