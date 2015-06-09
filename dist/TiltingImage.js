@@ -67,7 +67,7 @@
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundImage: 'url("' + src + '")',
-          transition: 'all 0.1s',
+          transition: 'transform 0.1s',
           WebkitTransform: transform,
           transform: transform
         };
