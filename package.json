@@ -1,6 +1,6 @@
 {
   "name": "tilting-image",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A React component that adds a tilt effect on images",
   "main": "dist/TiltingImage.js",
   "scripts": {
